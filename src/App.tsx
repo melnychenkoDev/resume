@@ -149,27 +149,27 @@ export default function App() {
 								<TerminalSquare className='w-4 h-4 text-gesh-green' />
 							</div>
 							<span className='font-display font-bold text-lg tracking-wide uppercase text-white shrink-0'>
-								Gleb <span className='text-gesh-green'>Melnichenko</span>
+								Gleb <span className='text-gesh-green'>Melnychenko</span>
 							</span>
 						</div>
 
 						{/* Mobile language toggle */}
 						<div className='sm:hidden flex bg-white/5 border border-white/10 rounded-lg p-1 relative'>
 							<div
-								className={`absolute top-1 bottom-1 w-[38px] bg-gesh-green rounded-md transition-all duration-300 ease-out ${i18n.language === 'en' ? 'translate-x-[42px]' : 'translate-x-0'}`}
+								className={`absolute top-1 bottom-1 w-[38px] bg-gesh-green rounded-md transition-all duration-300 ease-out ${i18n.language === 'uk' ? 'translate-x-[42px]' : 'translate-x-0'}`}
 								style={{ boxShadow: '0 0 10px rgba(180,216,0,0.3)' }}
 							/>
-							<button
-								onClick={() => toggleLanguage('ru')}
-								className={`relative z-10 px-3 py-1 text-xs font-mono rounded-md transition-colors w-[42px] font-bold ${i18n.language === 'ru' ? 'text-gesh-black' : 'text-gray-400 hover:text-white'}`}
-							>
-								RU
-							</button>
 							<button
 								onClick={() => toggleLanguage('en')}
 								className={`relative z-10 px-3 py-1 text-xs font-mono rounded-md transition-colors w-[42px] font-bold ${i18n.language === 'en' ? 'text-gesh-black' : 'text-gray-400 hover:text-white'}`}
 							>
 								EN
+							</button>
+							<button
+								onClick={() => toggleLanguage('uk')}
+								className={`relative z-10 px-3 py-1 text-xs font-mono rounded-md transition-colors w-[42px] font-bold ${i18n.language === 'uk' ? 'text-gesh-black' : 'text-gray-400 hover:text-white'}`}
+							>
+								UK
 							</button>
 						</div>
 					</div>
@@ -178,20 +178,20 @@ export default function App() {
 						{/* Desktop language toggle */}
 						<div className='hidden sm:flex bg-white/5 border border-white/10 rounded-lg p-1 relative'>
 							<div
-								className={`absolute top-1 bottom-1 w-[38px] bg-gesh-green rounded-md transition-all duration-300 ease-out ${i18n.language === 'en' ? 'translate-x-[42px]' : 'translate-x-0'}`}
+								className={`absolute top-1 bottom-1 w-[38px] bg-gesh-green rounded-md transition-all duration-300 ease-out ${i18n.language === 'uk' ? 'translate-x-[42px]' : 'translate-x-0'}`}
 								style={{ boxShadow: '0 0 10px rgba(180,216,0,0.3)' }}
 							/>
-							<button
-								onClick={() => toggleLanguage('ru')}
-								className={`relative z-10 px-3 py-1 text-xs font-mono rounded-md transition-colors w-[42px] font-bold ${i18n.language === 'ru' ? 'text-gesh-black' : 'text-gray-400 hover:text-white'}`}
-							>
-								RU
-							</button>
 							<button
 								onClick={() => toggleLanguage('en')}
 								className={`relative z-10 px-3 py-1 text-xs font-mono rounded-md transition-colors w-[42px] font-bold ${i18n.language === 'en' ? 'text-gesh-black' : 'text-gray-400 hover:text-white'}`}
 							>
 								EN
+							</button>
+							<button
+								onClick={() => toggleLanguage('uk')}
+								className={`relative z-10 px-3 py-1 text-xs font-mono rounded-md transition-colors w-[42px] font-bold ${i18n.language === 'uk' ? 'text-gesh-black' : 'text-gray-400 hover:text-white'}`}
+							>
+								UK
 							</button>
 						</div>
 
@@ -204,7 +204,7 @@ export default function App() {
 							<Mail className='w-4 h-4' /> wgagleb@gmail.com
 						</a>
 						<span className='text-[13px] sm:text-sm font-mono text-gray-400 flex items-center gap-1.5 sm:gap-2 shrink-0'>
-							<MapPin className='w-4 h-4' /> Одесса
+							<MapPin className='w-4 h-4' /> {t('nav.location')}
 						</span>
 					</div>
 				</div>
